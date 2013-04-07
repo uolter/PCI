@@ -72,10 +72,9 @@ Bayesian Classifier (Chapter 6)
 
 ### Code example
 
-  ``
+  
     import treepredict
    
-
     # fruits with their colors and size
     fruits = [
               [4, 'red', 'apple'],
@@ -98,9 +97,10 @@ Bayesian Classifier (Chapter 6)
     treepredict.drawtree(tree, jpeg='treeview.jpg')
 
 
-  ``
+  
 
 this is the tree:
+
 ``
     0:4? 
     T-> {'apple': 3}
