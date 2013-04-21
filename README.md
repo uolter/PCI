@@ -175,20 +175,20 @@ this is the tree:
 
 ### Code example
 
-  from random import randint
+    from random import randint
 
-  d1 = [[randint(-20, 20), randint(-20, 20)] for i in range(200)]
-  result = [(x**2 + y**2) < 144 and 1 or 1 for(x,y) in d1]
+    d1 = [[randint(-20, 20), randint(-20, 20)] for i in range(200)]
+    result = [(x**2 + y**2) < 144 and 1 or 1 for(x,y) in d1]
 
-  from svmutil import *
-  svm_model.predict = lambda self, x: svm_predict([0], [x], self)[0][0]
-  prob = svm_problem(result, d1)
-  param = svm_parameter()
-  param.kernel_type = RBF
-  param.C = 10
-  m=svm_train(prob, param)
+    from svmutil import *
+    svm_model.predict = lambda self, x: svm_predict([0], [x], self)[0][0]
+    prob = svm_problem(result, d1)
+    param = svm_parameter()
+    param.kernel_type = RBF
+    param.C = 10
+    m=svm_train(prob, param)
   
-  m.predict([2,2])
+    m.predict([2,2])
 
 (this code do not work well. It's not clear here the meaning of the svm_model.predict ... )
   
